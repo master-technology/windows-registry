@@ -370,7 +370,7 @@ napi_value SetStringRegKey(napi_env env, napi_callback_info info) {
     return nullptr;
   }
 
-  if (ERROR_SUCCESS != RegSetValueEx(hKey, name.c_str(), 0, REG_SZ, (BYTE*)value.c_str(), value.length() + 1)) {
+  if (ERROR_SUCCESS != RegSetValueEx(hKey, name.c_str(), 0, REG_SZ, (BYTE*)value.c_str(), (DWORD)(value.length() + 1))) {
     napi_throw_error(env, nullptr, "Unable to write registry key");
     return nullptr;
   }
