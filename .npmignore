@@ -1,10 +1,15 @@
-.github/
-.vscode/
+/.vscode
+/.github
+/build
+/lib
+/src
 azure-pipelines/
 build/
 lib/
 test/
+
 .gitignore
 .npmignore
 tsconfig.json
+binding.gyp
 yarn.lock
