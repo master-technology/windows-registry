@@ -1,6 +1,6 @@
 {
   "name": "@master.technology/windows-registry",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A native node module for accessing the windows registry",
   "os": [
     "win32"
@@ -14,8 +14,9 @@
   ],
   "scripts": {
 	"prepublishOnly": "npm run build && npm run test",
-	"build": "[ -f binding.gyp ] && tsc -p ./ && node-gyp rebuild && cp build/Release/winregistry.node dist/",
-	"test": "[ -d test ] && mocha -r ts-node/register test/**/*.test.ts"
+    "tsc": "tsc -p ./",
+	"build": "tsc -p ./ && node-gyp rebuild && copy build/Release/winregistry.node dist/",
+	"test": "mocha -r ts-node/register test/**/*.test.ts"
   },
   "repository": {
     "type": "git",
