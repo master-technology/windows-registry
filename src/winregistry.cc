@@ -110,7 +110,7 @@ napi_value EnumRegKeyKeys(napi_env env, napi_callback_info info) {
 
   while (ERROR_SUCCESS == RegEnumKeyEx(hKey, dwIndex, szBuffer, &dwBufferSize, NULL, NULL, NULL, NULL)) {
 	napi_value value;
-	result = szBuffer;
+	result = szBuffe r;
 	if (napi_ok != napi_create_string_utf8(env, result.c_str(), result.length(), &value)) {
 		break;
 	};
