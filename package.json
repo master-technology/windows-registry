@@ -3,7 +3,8 @@
   "version": "1.1.1",
   "description": "A native node module for accessing the windows registry",
   "os": [
-    "win32"
+    "win32",
+    "linux"
   ],
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
