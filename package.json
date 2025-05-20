@@ -4,7 +4,8 @@
   "description": "A native node module for accessing the windows registry",
   "os": [
     "win32",
-    "linux"
+    "linux",
+    "darwin"
   ],
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
